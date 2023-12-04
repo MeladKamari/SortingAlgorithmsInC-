@@ -1,28 +1,25 @@
 ﻿namespace SortingAlgorithms;
-
 public class ShellSort : ISortStrategy
 {
-    public  void Sort(int[] arr)
+    public void Sort(int[] arr)
     {
-        int i, j, pos, temp;
+        ShellSortAlgorithm(arr);
+    }
+    private void ShellSortAlgorithm(int[] arr)
+    {
         int n = arr.Length;
-        pos = 5;
-        while (pos > 0) {
-            for (i = 0; i < n; i++) {
-                j = i;
-                temp = arr[i];
-                while ((j >= pos) && (arr[j - pos] > temp)) {
-                    arr[j] = arr[j - pos];
-                    j = j - pos;
+        for (int gap = n / 2; gap > 0; gap /= 2)
+        {
+            for (int i = gap; i < n; i++)
+            {
+                int temp = arr[i];
+                int j;
+                for (j = i; j >= gap && arr[j - gap].CompareTo(temp) > 0; j -= gap)
+                {
+                    arr[j] = arr[j - gap];
                 }
                 arr[j] = temp;
             }
-            if (pos / 2 != 0)
-                pos = pos / 2;
-            else if (pos == 1)
-                pos = 0;
-            else
-                pos = 1;
         }
     }
 }
