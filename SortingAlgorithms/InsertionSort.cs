@@ -1,6 +1,6 @@
 ﻿namespace SortingAlgorithms;
 
-public class InsertionSort():ISortStrategy
+public class InsertionSort:ISortStrategy
 {
     public  void Sort(int[] arr)
     {
