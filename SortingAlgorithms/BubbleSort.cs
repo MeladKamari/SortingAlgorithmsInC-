@@ -1,6 +1,8 @@
-﻿public class BubbleSort : SortStrategy
+﻿namespace SortingAlgorithms;
+
+public class BubbleSort : ISortStrategy
 {
-    public override void Sort(int[] arr)
+    public  void Sort(int[] arr)
     {
         bool swapRequired;
         for (var write = 0; write < arr.Length-1; write++) {

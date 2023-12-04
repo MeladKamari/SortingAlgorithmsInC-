@@ -1,6 +1,8 @@
-﻿public class ShellSort : SortStrategy
+﻿namespace SortingAlgorithms;
+
+public class ShellSort : ISortStrategy
 {
-    public override void Sort(int[] arr)
+    public  void Sort(int[] arr)
     {
         int i, j, pos, temp;
         int n = arr.Length;

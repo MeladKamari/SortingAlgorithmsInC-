@@ -1,6 +1,8 @@
-﻿public class InsertionSort():SortStrategy
+﻿namespace SortingAlgorithms;
+
+public class InsertionSort():ISortStrategy
 {
-    public override void Sort(int[] arr)
+    public  void Sort(int[] arr)
     {
         for (var i = 1; i < arr.Length; i++)
         {

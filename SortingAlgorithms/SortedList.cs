@@ -1,8 +1,10 @@
-﻿public class SortedList
+﻿namespace SortingAlgorithms;
+
+public class SortedList
 {
     private int[] _arr = new int[20];
-    private SortStrategy _sortStrategy;
-    public void SetSortStrategy(SortStrategy sortStrategy)
+    private ISortStrategy _sortStrategy;
+    public void SetSortStrategy(ISortStrategy sortStrategy)
     {
         _sortStrategy = sortStrategy;
     }

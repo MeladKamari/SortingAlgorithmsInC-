@@ -1,6 +1,8 @@
-﻿public class SelectionArray : SortStrategy
+﻿namespace SortingAlgorithms;
+
+public class SelectionArray : ISortStrategy
 {
-    public override void Sort(int[] arr)
+    public  void Sort(int[] arr)
     {
         for (int i = 0; i < arr.Length - 1; i++)
         {
